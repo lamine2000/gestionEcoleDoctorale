@@ -1,0 +1,10 @@
+#submitButton{
+  animation: ease-in;
+  animation-delay: 0.7s;
+}
+
+#submitButton:hover{
+  color: white;
+  background-color: dodgerblue;
+  border: transparent;
+}
