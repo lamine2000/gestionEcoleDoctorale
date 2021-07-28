@@ -9,10 +9,12 @@ import { DoctorantViewComponent } from './doctorant-view/doctorant-view.componen
 import { AccueilComponent } from './accueil/accueil.component';
 import {RouterModule, Routes} from "@angular/router";
 import { FourOFourComponent } from './four-o-four/four-o-four.component';
+import { FormulaireInscriptionComponent } from './formulaire-inscription/formulaire-inscription.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'inscription', component: FormulaireInscriptionComponent },
   { path: '', component: AccueilComponent },
   { path: '**', component: FourOFourComponent }
 ];
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     DoctorantViewComponent,
     AccueilComponent,
-    FourOFourComponent
+    FourOFourComponent,
+    FormulaireInscriptionComponent
   ],
   imports: [
     BrowserModule,
