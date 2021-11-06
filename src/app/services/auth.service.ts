@@ -1,4 +1,4 @@
-export class AuthenticationService{
+export class AuthService{
   isAuth:boolean = false;
   typeUser?:string;
 
@@ -9,7 +9,7 @@ export class AuthenticationService{
           () => {
             this.isAuth = true;
             resolve(true);
-          }, 1000
+          }
         );
       }
     );

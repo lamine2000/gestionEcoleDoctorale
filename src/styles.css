@@ -7,6 +7,6 @@ body {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  background-color: #1f2220;
+  background-color: #181a1b !important;
   scroll-behavior: smooth;
 }
