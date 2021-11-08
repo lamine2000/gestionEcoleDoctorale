@@ -1,0 +1,14 @@
+#submitButton{
+  animation: ease-in;
+  animation-delay: 0.7s;
+}
+
+#submitButton:hover{
+  color: white;
+  background-color: dodgerblue;
+  border: transparent;
+}
+
+section{
+  background-color: #181a1b;
+}

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
+.navbar {
+  background-color: dodgerblue;
+}
+
+.dropdown-menu{
+  max-width: fit-content;
+}
+
+.dropdown-menu {
+  overflow: hidden;
+  transition: all 2s ease;
+}
+
+.dropdown-menu.folded {
+  max-height: 0;
+}
+
+.dropdown-menu.unfolded {
+  max-height: 500px;
+}
+
+
+.col{
+  max-width: 30%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flex {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+h5, h1 {
+  margin:0;
+  font-size:20px;
+  color:rgba(255,255,255,0.8);
+}
+
+h1 {
+  font-size:56px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder ;
+  margin-top: 10%;
+  text-decoration: underline;
+}
+
+p {
+  color: rgba(232, 230, 227, 0.5);
+}
+
+#carouselExampleControls{
+  margin-top: 5%;
+  width: 60%;
+  margin-left: 20%;
+}
+
+#presentation{
+  width: 50%;
+  margin-bottom: 10%;
+  margin-left: 45%;
+  margin-right:5%;
+  text-align:justify;
+}
+
+#candidature{
+  width: 50%;
+  text-align: justify;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right:45%;
+}
+
+.card{
+  background-color: dodgerblue;
+  margin-left: 40%;
+  margin-top:5%
+}
+
+#actualite{
+  text-align:center;
+}
+
+.card-text{
+  font-weight:bold;
+}

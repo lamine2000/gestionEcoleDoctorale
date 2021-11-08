@@ -1,0 +1,56 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+#.spec.txs files
+/src/app/book-list/book-form/book-form.component.spec.ts
+/src/app/book-list/single-book/single-book.component.spec.ts
+/src/app/book-list/book-list.component.spec.ts
+/src/app/header/header.component.spec.ts
+/src/app/models/book.spec.ts
+/src/app/services/auth.service.spec.ts
+/src/app/services/auth-guard.service.spec.ts
+/src/app/services/books.service.spec.ts
+/src/app/app.component.spec.ts
