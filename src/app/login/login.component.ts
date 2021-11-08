@@ -38,20 +38,21 @@ export class LoginComponent implements OnInit {
         this.doctorants = doctorants;
       }
     );
+    this.doctorantsService.emitDoctorants();
 
     this.spesialUsersSubscription = this.specialUsersService.specialUsersSubject.subscribe(
       (specialUsers) => {
         this.specialUsers = specialUsers;
       }
-    )
-
+    );
+    this.specialUsersService.emitSpecialUsers();
   }
 
   initForm(){
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
-    })
+    });
   }
 
   onSignIn(){
@@ -87,6 +88,9 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  ngOnDestroy(): void {}
+  ngOnDestroy(): void {
+    this.doctorantsService.doctorantsSubject.unsubscribe();
+    this.specialUsersService.specialUsersSubject.unsubscribe();
+  }
 
 }

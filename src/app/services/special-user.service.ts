@@ -10,7 +10,7 @@ export class SpecialUserService {
   specialUsers: SpecialUser[] = [];
   specialUsersSubject : Subject<SpecialUser[]> = new Subject<SpecialUser[]>();
 
-  constructor() { this.getSpecialsers(); }
+  constructor() { this.getSpecialUsers(); }
 
   emitSpecialUsers(){
     this.specialUsersSubject.next(this.specialUsers.slice());
@@ -20,7 +20,7 @@ export class SpecialUserService {
     firebase.default.database().ref('/special-users').set(this.specialUsers);
   }
 
-  getSpecialsers(){
+  getSpecialUsers(){
     firebase.default.database().ref('/special-users').on(
       'value',
       (data) => {
