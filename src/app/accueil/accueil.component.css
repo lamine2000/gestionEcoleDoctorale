@@ -97,3 +97,7 @@ p {
 .card-text{
   font-weight:bold;
 }
+
+section{
+  background-color: #181a1b;
+}

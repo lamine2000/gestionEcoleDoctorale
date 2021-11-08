@@ -1,5 +1,6 @@
 .navbar {
   background-color: royalblue;
+  min-height: 8%;
 }
 
 .dropdown-menu{
@@ -37,4 +38,8 @@
   display:flex;
   align-items:center;
   justify-content:center;
+}
+
+a{
+  font-size: 1.1em !important;
 }
