@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
-@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 h1 {
   font-size:56px;
   font-family: "Montserrat", sans-serif;
   font-weight: bolder ;
   margin-top: 10%;
+  margin-bottom: 5%;
   text-decoration: underline;
 }
 
@@ -22,11 +23,36 @@ p {
 
 .formulaire{
   background-color: rgba(230,225, 225, 0.7);
+  border-radius: 5%;
   color: black;
   font-weight: bold;
+  width: 60%;
+  text-align: center;
+  padding-bottom: 2%;
 }
 
 section{
   background-color: #181a1b;
   height: 100%;
+}
+
+fieldset{
+  margin: 4%;
+}
+
+button{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+legend{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.form-check{
+  margin-top: 2%;
 }
