@@ -10,20 +10,24 @@ import { FourOFourComponent } from './four-o-four/four-o-four.component';
 import { FormulaireInscriptionComponent } from './formulaire-inscription/formulaire-inscription.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {DoctorantViewComponent} from "./views/doctorant-view/doctorant-view.component";
 import {AuthGuardService} from "./services/auth-guard.service";
-import { AdminComponent } from './views/admin/admin.component';
-import { SecretaireEdmiComponent } from './views/secretaire-edmi/secretaire-edmi.component';
-import { DirecteurTheseComponent } from './views/directeur-these/directeur-these.component';
-import { RecteurComponent } from './views/recteur/recteur.component';
-import { ResponsableFormationDoctoraleComponent } from './views/responsable-formation-doctorale/responsable-formation-doctorale.component';
-import { DoctorantComponent } from './views/doctorant/doctorant.component';
+import { AdminComponent } from './user-views/admin/admin.component';
+import { SecretaireEdmiComponent } from './user-views/secretaire-edmi/secretaire-edmi.component';
+import { DirecteurTheseComponent } from './user-views/directeur-these/directeur-these.component';
+import { RecteurComponent } from './user-views/recteur/recteur.component';
+import { ResponsableFormationDoctoraleComponent } from './user-views/responsable-formation-doctorale/responsable-formation-doctorale.component';
+import { DoctorantComponent } from './user-views/doctorant/doctorant.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'login', component: LoginComponent },
   { path: 'inscription', component: FormulaireInscriptionComponent },
-  { path: 'doctorant/view/:id', component: DoctorantViewComponent },
+  { path: 'doctorant/view/:id', component: DoctorantComponent },
+  { path: 'secretaire-edmi', component: SecretaireEdmiComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'directeur-these', component: DirecteurTheseComponent },
+  { path: 'drecteur', component: RecteurComponent },
+  { path: 'responsable-formation-dorctorale', component: RecteurComponent },
   { path: '', component: AccueilComponent },
   { path: '**', component: FourOFourComponent }
 ];
@@ -33,7 +37,6 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    DoctorantViewComponent,
     AccueilComponent,
     FourOFourComponent,
     FormulaireInscriptionComponent,
