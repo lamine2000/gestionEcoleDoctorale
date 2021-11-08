@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Doctorant} from "../models/doctorant";
 import {Subject} from "rxjs";
 import * as firebase from "firebase";
 import {SpecialUser} from "../models/Special-user";
@@ -17,7 +16,7 @@ export class SpecialUserService {
     this.specialUsersSubject.next(this.specialUsers.slice());
   }
 
-  saveDoctorants(){
+  saveSpecialUsers(){
     firebase.default.database().ref('/special-users').set(this.specialUsers);
   }
 
@@ -32,7 +31,7 @@ export class SpecialUserService {
   }
 
   getSingleSpecialUser(id: number){
-    return new Promise<Doctorant>(
+    return new Promise<SpecialUser>(
       (resolve, reject) => {
         firebase.default.database().ref('/special-users/'+id).once('value').then(
           (data) => {resolve(data.val());},
@@ -44,14 +43,14 @@ export class SpecialUserService {
 
   createNewSpecialUser(specialUser: SpecialUser){
     this.specialUsers.push(specialUser);
-    this.saveDoctorants();
+    this.saveSpecialUsers();
     this.emitSpecialUsers();
   }
 
   removeSpecialUser(specialUser: SpecialUser){
     const specialUserIndexToRemove = this.specialUsers.indexOf(specialUser);
     this.specialUsers.splice(specialUserIndexToRemove, 1);
-    this.saveDoctorants();
+    this.saveSpecialUsers();
     this.emitSpecialUsers();
   }
 }

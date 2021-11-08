@@ -12,3 +12,8 @@
 section{
   background-color: #181a1b;
 }
+
+.message{
+  color: red;
+  font-style: italic;
+}
