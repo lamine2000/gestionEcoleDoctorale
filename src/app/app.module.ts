@@ -12,6 +12,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {DoctorantViewComponent} from "./views/doctorant-view/doctorant-view.component";
 import {AuthGuardService} from "./services/auth-guard.service";
+import { AdminComponent } from './views/admin/admin.component';
+import { SecretaireEdmiComponent } from './views/secretaire-edmi/secretaire-edmi.component';
+import { DirecteurTheseComponent } from './views/directeur-these/directeur-these.component';
+import { RecteurComponent } from './views/recteur/recteur.component';
+import { ResponsableFormationDoctoraleComponent } from './views/responsable-formation-doctorale/responsable-formation-doctorale.component';
+import { DoctorantComponent } from './views/doctorant/doctorant.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -30,7 +36,13 @@ const appRoutes: Routes = [
     DoctorantViewComponent,
     AccueilComponent,
     FourOFourComponent,
-    FormulaireInscriptionComponent
+    FormulaireInscriptionComponent,
+    AdminComponent,
+    SecretaireEdmiComponent,
+    DirecteurTheseComponent,
+    RecteurComponent,
+    ResponsableFormationDoctoraleComponent,
+    DoctorantComponent
   ],
   imports: [
     BrowserModule,
