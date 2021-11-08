@@ -1,4 +1,9 @@
 export class Doctorant {
+  public compteActif: boolean;
+  public etape: number;
+  public precedenteEtape: number;
+  public motDePasse: string;
+  public fichierProjet: string;
 
   constructor(
     public nom: string,
@@ -25,6 +30,10 @@ export class Doctorant {
     public nomPrenomResponsableFormationDoctoraleEtablissementPartenaire: string | null,
     public nomPrenomGradeDirecteurTheseEtablissementPartenaire: string | null
   ){
-
+    this.compteActif = false;
+    this.precedenteEtape = 0;
+    this.etape = 1;
+    this.motDePasse = "passer";
+    this.fichierProjet = '';
   }
 }

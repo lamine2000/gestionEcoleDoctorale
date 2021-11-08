@@ -12,6 +12,10 @@ import {Doctorant} from "../models/doctorant";
 export class FormulaireInscriptionComponent implements OnInit {
 
   inscriptionForm!: FormGroup;
+  fileIsUploading: boolean = false;
+  fileUrl!: any;
+  fileUploaded: boolean = false
+
   constructor(
     private doctorantsService: DoctorantsService,
     private formBuilder: FormBuilder,
@@ -47,7 +51,8 @@ export class FormulaireInscriptionComponent implements OnInit {
         nomEtablissementPartenaire: '',
         adresseEtablissementPartenaire: '',
         nomPrenomResponsableFormationDoctoraleEtablissementPartenaire: '',
-        nomPrenomGradeDirecteurTheseEtablissementPartenaire: ''
+        nomPrenomGradeDirecteurTheseEtablissementPartenaire: '',
+        fichierProjet: ['', Validators.required]
       }
     );
     console.log(this.inscriptionForm);
@@ -126,8 +131,13 @@ export class FormulaireInscriptionComponent implements OnInit {
       nomPrenomResponsableFormationDoctoraleEtablissementPartenaire,
       nomPrenomGradeDirecteurTheseEtablissementPartenaire
     );
+
+    if(this.fileUrl && this.fileUrl !== ''){
+      doctorant.fichierProjet = this.fileUrl.toString();
+    }
+
     this.doctorantsService.createNewDoctorant(doctorant);
-    alert("Demande soumise avec succès !");
+    alert("Demande soumise avec succès. Votre compte sera activé après examination de votre dossier");
 
     this.router.navigate(['/login']);
   }
@@ -147,6 +157,22 @@ export class FormulaireInscriptionComponent implements OnInit {
     let num = this.inscriptionForm.get('telephone').value;
     num = num.split('').filter((e: { trim: () => { (): any; new(): any; length: any; }; }) => e.trim().length).join('');
     return parseInt(num) == num && num.length == 9;
+  }
+
+  onUploadFile(file: File){
+    this.fileIsUploading = true;
+    this.doctorantsService.uploadFile(file).then(
+      (url: any) => {
+        this.fileUrl = url;
+        this.fileIsUploading = false;
+        this.fileUploaded = true;
+      }
+    )
+  }
+
+  detectFiles(event: Event){
+    // @ts-ignore
+    this.onUploadFile(event.target.files[0]);
   }
 
 

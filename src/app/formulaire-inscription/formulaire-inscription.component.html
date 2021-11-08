@@ -478,9 +478,21 @@
               </div>
             </div>
           </fieldset>
+
+          <div class="form-group">
+            <h4>Déposez votre projet de recherche</h4>
+            <input
+              type="file"
+              class="form-control"
+              formControlName="fichierProjet"
+              (change)="detectFiles($event)"
+              accept="application/pdf">
+            <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
+          </div>
+
           <button class="btn btn-primary"
                   type="submit"
-                  [disabled]="inscriptionForm.invalid || isMissing() || !this.isTel()">
+                  [disabled]="inscriptionForm.invalid || isMissing() || !this.isTel() || fileIsUploading">
             Soumettre
           </button>
         </form>
