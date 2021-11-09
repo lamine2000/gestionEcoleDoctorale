@@ -1,1 +1,78 @@
-<p>single-doctorant works!</p>
+<div class="container">
+
+  <div class="col-sm-6">
+    <div class="card" id="card1">
+      <div class="card-body">
+        <h3 class="card-title">Informations Personnelles</h3>
+        <p class="card-text">Nom: {{doctorant.nom}}</p>
+        <p class="card-text">Prénom: {{doctorant.prenom}}</p>
+        <p class="card-text" *ngIf="doctorant.nomEpouse != ''">Nom Épouse: {{doctorant.nom}}</p>
+        <p class="card-text">Téléphone: {{doctorant.telephone}}</p>
+        <p class="card-text">Email: {{doctorant.email}}</p>
+        <p class="card-text">Adresse: {{doctorant.adresse}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="card" id="card2">
+        <div class="card-body">
+          <h3 class="card-title">Cursus Universitaire</h3>
+          <p class="card-text">Diplome d'accès: {{doctorant.diplome}}</p>
+          <p class="card-text">Spécialité: {{doctorant.specialite}}</p>
+          <p class="card-text">Université: {{doctorant.universiteObtentionDiplome}}</p>
+          <p class="card-text">Pays: {{doctorant.paysObtentionDiplome}}</p>
+          <p class="card-text">Lieu d'obtention du diplome: {{doctorant.villeObtentionDiplome}}</p>
+          <p class="card-text">Date d'obtention du diplome: {{doctorant.dateObtentionDiplome}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card" id="card3">
+        <div class="card-body">
+          <h3 class="card-title">Information sur le Doctorat</h3>
+          <p class="card-text">Intitulé du Doctorat: {{doctorant.intituleDoctorat}}</p>
+          <p class="card-text">Établissement de Rattachement: {{doctorant.etablissementRattachement}}</p>
+          <p class="card-text">École Doctorale: {{doctorant.ecoleDoctorale}}</p>
+          <p class="card-text">Laboratoire d'Accueil: {{doctorant.laboratoireAccueil}}</p>
+          <p class="card-text">Adresse du Laboratoire: {{doctorant.adresseLaboratoireAccueil}}</p>
+          <p class="card-text">Sujet de Thèse: {{doctorant.sujetThese}}</p>
+          <p class="card-text">Projet de Recherche: <a [href]=doctorant.fichierProjet
+                                                       target="_blank">Visionner</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6" *ngIf="doctorant.enCotutelle">
+    <div class="card" id="card4">
+      <div class="card-body">
+        <h3 class="card-title">Thèse en Cotutelle</h3>
+        <p class="card-text">Nom de l'Établissement Universitaire Partenaire: {{doctorant.nomEtablissementPartenaire}}</p>
+        <p class="card-text">Adresse de l'Établissement: {{doctorant.adresseEtablissementPartenaire}}</p>
+        <p class="card-text">Nom et Prénom du Responsable de La Formation Doctorale: {{doctorant.nomPrenomResponsableFormationDoctoraleEtablissementPartenaire}}</p>
+        <p class="card-text">Nom, Prénom et Grade du Directeur de Thèse Partenaire: {{doctorant.nomPrenomGradeDirecteurTheseEtablissementPartenaire}}</p>
+      </div>
+    </div>
+  </div>
+
+  <button type="button"
+          class="btn btn-success btn-lg btn-block"
+          (click)="onApprouver()">Approuver demande
+  </button>
+  <button type="button"
+          class="btn btn-danger btn-lg btn-block"
+          (click)="onRefuser()">Refuser demande
+  </button>
+  <button type="button"
+          class="btn btn-primary btn-lg btn-block"
+          (click)="onBack()">Retour
+  </button>
+
+
+</div>
