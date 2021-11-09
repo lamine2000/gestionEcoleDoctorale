@@ -12,6 +12,11 @@ import {Router} from "@angular/router";
 export class DirecteurTheseComponent implements OnInit {
 
   demandesEnAttente: Doctorant[] = [];
+  demandesSecretaireEdmi: Doctorant[] = [];
+  demandesDirecteurLabo: Doctorant[] = [];
+  demandesResponsableFormationDoctorale: Doctorant[] = [];
+  demandesDirecteurEcoleDoctorale: Doctorant[] = [];
+
   doctorants: Doctorant[] = [];
   doctorantsSubscription! : Subscription;
 
@@ -34,6 +39,18 @@ export class DirecteurTheseComponent implements OnInit {
     for (const elt of this.doctorants) {
       if(!elt.compteActif /*&& elt.etape == 1*/){
         this.demandesEnAttente.push(elt);
+      }
+      else if(elt.etape == 2){
+        this.demandesSecretaireEdmi.push(elt);
+      }
+      else if(elt.etape == 3){
+        this.demandesDirecteurLabo.push(elt);
+      }
+      else if(elt.etape == 4){
+        this.demandesResponsableFormationDoctorale.push(elt);
+      }
+      else if(elt.etape == 5){
+        this.demandesDirecteurEcoleDoctorale.push(elt);
       }
     }
   }

@@ -55,3 +55,15 @@ a{
 .btn-danger{
   margin: 2% 2% 2% 33%;
 }
+
+h2{
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+  margin-bottom: 2%;
+}
+
+.row{
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
