@@ -28,7 +28,8 @@ export class Doctorant {
     public nomEtablissementPartenaire: string | null,
     public adresseEtablissementPartenaire: string | null,
     public nomPrenomResponsableFormationDoctoraleEtablissementPartenaire: string | null,
-    public nomPrenomGradeDirecteurTheseEtablissementPartenaire: string | null
+    public nomPrenomGradeDirecteurTheseEtablissementPartenaire: string | null,
+    public emailEncadrant: string
   ){
     this.compteActif = "false";
     this.precedenteEtape = 0;

@@ -35,6 +35,7 @@
         <div class="card-body">
           <h3 class="card-title">Information sur le Doctorat</h3>
           <p class="card-text">Intitulé du Doctorat: {{doctorant.intituleDoctorat}}</p>
+          <p class="card-text">Email de l'Encadrant: {{doctorant.emailEncadrant}}</p>
           <p class="card-text">Établissement de Rattachement: {{doctorant.etablissementRattachement}}</p>
           <p class="card-text">École Doctorale: {{doctorant.ecoleDoctorale}}</p>
           <p class="card-text">Laboratoire d'Accueil: {{doctorant.laboratoireAccueil}}</p>
@@ -63,11 +64,11 @@
 
   <button type="button"
           class="btn btn-success btn-lg btn-block"
-          (click)="onApprouver()">Approuver demande
+          (click)="onApprouver()">Approuver
   </button>
   <button type="button"
           class="btn btn-danger btn-lg btn-block"
-          (click)="onRefuser()">Refuser demande
+          (click)="onRefuser()">Refuser
   </button>
   <button type="button"
           class="btn btn-primary btn-lg btn-block"
