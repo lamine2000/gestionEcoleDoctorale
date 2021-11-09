@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
         this.doctorants[i].email === email.toString() &&
         password.toString() === 'passer'
       ){
-        if(this.doctorants[i].compteActif) {
+        if(this.doctorants[i].compteActif !== "false") {
           this.router.navigate(['/doctorant', 'view', i]);
         }
         else{
