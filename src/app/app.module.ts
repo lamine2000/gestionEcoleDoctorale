@@ -18,6 +18,7 @@ import { RecteurComponent } from './user-views/recteur/recteur.component';
 import { ResponsableFormationDoctoraleComponent } from './user-views/responsable-formation-doctorale/responsable-formation-doctorale.component';
 import { DoctorantComponent } from './user-views/doctorant/doctorant.component';
 import { SingleDoctorantComponent } from './user-views/single-doctorant/single-doctorant.component';
+import { DirecteurLaboratoireComponent } from './user-views/directeur-laboratoire/directeur-laboratoire.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -30,6 +31,8 @@ const appRoutes: Routes = [
   { path: 'drecteur', component: RecteurComponent },
   { path: 'responsable-formation-dorctorale', component: RecteurComponent },
   { path: 'doctorants/single/:id', component: SingleDoctorantComponent },
+  { path: 'directeur-laboratoire', component: DirecteurLaboratoireComponent },
+  { path: 'responsable-formation-doctorale', component: ResponsableFormationDoctoraleComponent },
   { path: '', component: AccueilComponent },
   { path: '**', component: FourOFourComponent }
 ];
@@ -48,7 +51,8 @@ const appRoutes: Routes = [
     RecteurComponent,
     ResponsableFormationDoctoraleComponent,
     DoctorantComponent,
-    SingleDoctorantComponent
+    SingleDoctorantComponent,
+    DirecteurLaboratoireComponent
   ],
   imports: [
     BrowserModule,
