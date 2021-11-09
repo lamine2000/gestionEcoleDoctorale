@@ -5,11 +5,11 @@ import {DoctorantsService} from "../../services/doctorants.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-responsable-formation-doctorale',
-  templateUrl: './responsable-formation-doctorale.component.html',
-  styleUrls: ['./responsable-formation-doctorale.component.css']
+  selector: 'app-directeur-ecole-doctorale',
+  templateUrl: './directeur-ecole-doctorale.component.html',
+  styleUrls: ['./directeur-ecole-doctorale.component.css']
 })
-export class ResponsableFormationDoctoraleComponent implements OnInit {
+export class DirecteurEcoleDoctoraleComponent implements OnInit {
 
   demandesEnAttente: Doctorant[] = [];
   doctorants: Doctorant[] = [];
@@ -34,7 +34,7 @@ export class ResponsableFormationDoctoraleComponent implements OnInit {
     this.isEncadrant = false;
     this.demandesEnAttente = [];
     for (const elt of this.doctorants) {
-      if(elt.etape == 4){
+      if(elt.etape == 5){
         this.demandesEnAttente.push(elt);
       }
     }
@@ -48,6 +48,8 @@ export class ResponsableFormationDoctoraleComponent implements OnInit {
     let realIndex: number = this.doctorants.indexOf(this.demandesEnAttente[i]);
     this.router.navigate(['/doctorants', 'single', realIndex]);
   }
+
+
 
   ngOnDestroy(){
     this.doctorantsSubscription.unsubscribe();

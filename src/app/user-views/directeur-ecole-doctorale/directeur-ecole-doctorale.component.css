@@ -1,0 +1,87 @@
+.bv {
+  background-color: #eee
+}
+
+.nav-link:hover {
+  background-color: #525252 !important
+}
+
+.nav-link .fa {
+  transition: all 1s
+}
+
+.nav-link:hover .fa {
+  transform: rotate(360deg)
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a{
+  font-size: 1.3em;
+}
+
+.empty{
+  vertical-align: middle;
+  text-align: center;
+  color: green;
+}
+
+.delete-btn{
+  background-color: orange;
+  padding: 0 5px 0 5px;
+  margin-left: 95%;
+  transition: ease-in, .75s;
+}
+
+.delete-btn:hover{
+  background-color: red;
+}
+
+.book{
+  transition: ease-in, .4s;
+}
+
+.book:hover{
+  background-color: #39c0ed;
+}
+
+.deconnexion{
+  background: orange;
+  color: white;
+}
+
+.btn-danger{
+  margin: 2% 2% 2% 33%;
+}
+
+.card-title{
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  transition: all 1s;
+}
+
+.card:hover{
+  background-color: dodgerblue;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 2%;
+  text-decoration: underline;
+  font-size: 3em;
+}
