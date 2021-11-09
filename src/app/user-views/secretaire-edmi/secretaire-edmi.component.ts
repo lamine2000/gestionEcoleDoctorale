@@ -32,7 +32,7 @@ export class SecretaireEdmiComponent implements OnInit {
   viewDemandes(){
     this.demandesEnAttente = [];
     for (const elt of this.doctorants) {
-      if(!elt.compteActif){
+      if(!elt.compteActif /*&& elt.etape == 1*/){
         this.demandesEnAttente.push(elt);
       }
     }
