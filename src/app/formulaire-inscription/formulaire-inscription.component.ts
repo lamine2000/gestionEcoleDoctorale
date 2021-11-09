@@ -52,7 +52,8 @@ export class FormulaireInscriptionComponent implements OnInit {
         adresseEtablissementPartenaire: '',
         nomPrenomResponsableFormationDoctoraleEtablissementPartenaire: '',
         nomPrenomGradeDirecteurTheseEtablissementPartenaire: '',
-        fichierProjet: ['', Validators.required]
+        fichierProjet: ['', Validators.required],
+        emailEncadrant: ['', [Validators.required, Validators.email]]
       }
     );
     console.log(this.inscriptionForm);
@@ -105,6 +106,8 @@ export class FormulaireInscriptionComponent implements OnInit {
     let nomPrenomResponsableFormationDoctoraleEtablissementPartenaire = this.inscriptionForm.get('nomPrenomResponsableFormationDoctoraleEtablissementPartenaire').value;
     // @ts-ignore
     let nomPrenomGradeDirecteurTheseEtablissementPartenaire = this.inscriptionForm.get('nomPrenomGradeDirecteurTheseEtablissementPartenaire').value;
+    // @ts-ignore
+    let emailEncadrant = this.inscriptionForm.get('emailEcadrant').value;
 
     let doctorant = new Doctorant(
       nom,
@@ -129,7 +132,8 @@ export class FormulaireInscriptionComponent implements OnInit {
       nomEtablissementPartenaire,
       adresseEtablissementPartenaire,
       nomPrenomResponsableFormationDoctoraleEtablissementPartenaire,
-      nomPrenomGradeDirecteurTheseEtablissementPartenaire
+      nomPrenomGradeDirecteurTheseEtablissementPartenaire,
+      emailEncadrant
     );
 
     if(this.fileUrl && this.fileUrl !== ''){
