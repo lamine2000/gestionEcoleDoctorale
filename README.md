@@ -1,4 +1,4 @@
-# GestionLivres
+# Gestion Ecole Doctorale (cas de l'E.D.M.I)
 ### Do you want to <a href="https://projet-edmi.web.app">Visit the web app</a> ?
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
