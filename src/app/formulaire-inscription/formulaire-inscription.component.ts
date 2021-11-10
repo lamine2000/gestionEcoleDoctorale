@@ -180,11 +180,6 @@ export class FormulaireInscriptionComponent implements OnInit {
   }
 
 
-  //TODO: moi meme creer les comptes pour les differents utilisateurs (@generiques et mots de passe prédefinis)
-  //TODO: ajouter a la database , un nouveau noeud nommé specialAccounts avec ces comptes generiques. A l authentification, suivant le compte de l utilisateur, on pourra determiner quelle vue charger.
-  //TODO: Connecter le template login avec son script
-  //TODO: designer les vues apres rappel des utilisateurs et de leurs roles
-  //TODO: rajouter au model Doctorant, le nombre d'etapes (passees par le dossier). Sur la vue du recteur par example, seront affichees l ensemble des dossiers ayant franchis n etapes
   //TODO: rajouter au model Doctorant le nombre de ... qui doit etre inferieur à 5
 
 }
