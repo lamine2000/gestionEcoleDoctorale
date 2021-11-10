@@ -55,7 +55,7 @@ export class SingleDoctorantComponent implements OnInit {
    this.doctorant.precedenteEtape = this.doctorant.etape;
    this.doctorant.etape--;
    this.doctorantsService.saveDoctorants();
-    this.onBack();
+   this.onBack();
   }
 
 }

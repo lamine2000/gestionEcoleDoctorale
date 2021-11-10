@@ -1,0 +1,76 @@
+
+.title{
+  margin-top: 7%;
+  margin-bottom: 2%;
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.card, .card-info{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  transition: all 1s;
+  text-align: center;
+}
+
+.card:hover, .card-info:hover{
+  background-color: dodgerblue;
+}
+
+.card-info{
+  margin: 5%;
+  padding: 5%;
+}
+
+#card1, #card4{
+  width: 100%;
+  margin-left: 50%;
+}
+
+.card-info .card-body{
+  font-size: 1.2em;
+}
+
+.red, .green, .orange{
+  text-align: center;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+
+.orange{
+  color: orange;
+}
+
+.statut{
+  margin-bottom: 2%;
+}
+
+.statut .card-body h4{
+  padding: 3%;
+}
+
+.card .card-body h4:first-child{
+  padding-top: 3% ;
+}
+
+.card .card-body h4:last-child{
+  padding-bottom: 3% !important;
+}
+
+ .card .card-body h4{
+  padding-top: 10px;
+}

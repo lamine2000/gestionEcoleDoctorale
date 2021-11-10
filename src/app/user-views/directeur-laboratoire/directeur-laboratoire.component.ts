@@ -5,16 +5,15 @@ import {DoctorantsService} from "../../services/doctorants.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-responsable-formation-doctorale',
-  templateUrl: './responsable-formation-doctorale.component.html',
-  styleUrls: ['./responsable-formation-doctorale.component.css']
+  selector: 'app-directeur-laboratoire',
+  templateUrl: './directeur-laboratoire.component.html',
+  styleUrls: ['./directeur-laboratoire.component.css']
 })
-export class ResponsableFormationDoctoraleComponent implements OnInit {
+export class DirecteurLaboratoireComponent implements OnInit {
 
   demandesEnAttente: Doctorant[] = [];
   doctorants: Doctorant[] = [];
   doctorantsSubscription! : Subscription;
-  isEncadrant: Boolean = false;
 
   constructor(
     private doctorantsService: DoctorantsService,
@@ -31,17 +30,12 @@ export class ResponsableFormationDoctoraleComponent implements OnInit {
   }
 
   viewDemandes(){
-    this.isEncadrant = false;
     this.demandesEnAttente = [];
     for (const elt of this.doctorants) {
-      if(elt.etape == 4){
+      if(elt.etape == 3){
         this.demandesEnAttente.push(elt);
       }
     }
-  }
-
-  viewEncadrants(){
-    this.isEncadrant = true;
   }
 
   onViewDoctorant(i: number){
