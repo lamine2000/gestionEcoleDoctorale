@@ -35,7 +35,7 @@
       <button class="list-group-item book"
               *ngFor="let elt of this.demandesEnAttente; let i = index"
               (click)="onViewDoctorant(i)">
-        <h3 class="list-group-item-heading">
+        <h3 class="list-group-item-heading" [ngClass]="{'red': elt.etape < elt.precedenteEtape}">
           {{ elt.nom }} {{elt.prenom}}
           <button class="btn btn-default pull-right btn-lg delete-btn">
             <span class="glyphicon glyphicon-minus"></span>

@@ -37,7 +37,7 @@ export class DirecteurTheseComponent implements OnInit {
   viewDemandes(){
     this.demandesEnAttente = [];
     for (const elt of this.doctorants) {
-      if(!elt.compteActif /*&& elt.etape == 1*/){
+      if(elt.etape == 1 || !elt.compteActif){
         this.demandesEnAttente.push(elt);
       }
       else if(elt.etape == 2){
