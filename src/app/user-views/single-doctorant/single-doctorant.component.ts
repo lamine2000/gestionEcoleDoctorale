@@ -52,8 +52,8 @@ export class SingleDoctorantComponent implements OnInit {
   }
 
   onRefuser(){
-   this.doctorant.precedenteEtape = this.doctorant.etape;
-   this.doctorant.etape--;
+   this.doctorants[this.i].precedenteEtape = this.doctorant.etape;
+   this.doctorants[this.i].etape--;
    this.doctorantsService.saveDoctorants();
    this.onBack();
   }

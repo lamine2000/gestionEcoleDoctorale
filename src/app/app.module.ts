@@ -14,7 +14,6 @@ import {AuthGuardService} from "./services/auth-guard.service";
 import { AdminComponent } from './user-views/admin/admin.component';
 import { SecretaireEdmiComponent } from './user-views/secretaire-edmi/secretaire-edmi.component';
 import { DirecteurTheseComponent } from './user-views/directeur-these/directeur-these.component';
-import { RecteurComponent } from './user-views/recteur/recteur.component';
 import { ResponsableFormationDoctoraleComponent } from './user-views/responsable-formation-doctorale/responsable-formation-doctorale.component';
 import { DoctorantComponent } from './user-views/doctorant/doctorant.component';
 import { SingleDoctorantComponent } from './user-views/single-doctorant/single-doctorant.component';
@@ -29,8 +28,6 @@ const appRoutes: Routes = [
   { path: 'secretaire-edmi', component: SecretaireEdmiComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'directeur-these', component: DirecteurTheseComponent },
-  { path: 'drecteur', component: RecteurComponent },
-  { path: 'responsable-formation-dorctorale', component: RecteurComponent },
   { path: 'doctorants/single/:id', component: SingleDoctorantComponent },
   { path: 'directeur-laboratoire', component: DirecteurLaboratoireComponent },
   { path: 'responsable-formation-doctorale', component: ResponsableFormationDoctoraleComponent },
@@ -50,7 +47,6 @@ const appRoutes: Routes = [
     AdminComponent,
     SecretaireEdmiComponent,
     DirecteurTheseComponent,
-    RecteurComponent,
     ResponsableFormationDoctoraleComponent,
     DoctorantComponent,
     SingleDoctorantComponent,
