@@ -2,27 +2,11 @@
   margin-top: 10%;
 }
 
-.card{
-  margin: 5%;
-  padding: 5%;
-}
-
-#card1, #card4{
-  width: 100%;
-  margin-left: 50%;
-}
-
 button{
   text-align: center;
   display: block;
   width: 60%;
   margin: 5% auto 2%;
-}
-
-.card-title{
-  font-style: italic;
-  font-weight: bold;
-  margin-bottom: 3%;
 }
 
 .btn-primary{
@@ -43,8 +27,25 @@ button{
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 0.25rem;
   transition: all 1s;
+  margin: 5%;
+  padding: 5%;
 }
 
 .card:hover{
   background-color: dodgerblue;
+}
+
+.card-body{
+  font-size: 1.2em;
+}
+
+#card1, #card4{
+  width: 100%;
+  margin-left: 50%;
+}
+
+.card-title{
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 3%;
 }
