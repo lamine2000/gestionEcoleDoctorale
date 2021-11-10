@@ -107,7 +107,7 @@ export class FormulaireInscriptionComponent implements OnInit {
     // @ts-ignore
     let nomPrenomGradeDirecteurTheseEtablissementPartenaire = this.inscriptionForm.get('nomPrenomGradeDirecteurTheseEtablissementPartenaire').value;
     // @ts-ignore
-    let emailEncadrant = this.inscriptionForm.get('emailEcadrant').value;
+    let emailEncadrant = this.inscriptionForm.get('emailEncadrant').value;
 
     let doctorant = new Doctorant(
       nom,
