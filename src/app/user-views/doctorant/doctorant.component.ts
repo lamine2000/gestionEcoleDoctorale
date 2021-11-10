@@ -13,7 +13,7 @@ export class DoctorantComponent implements OnInit {
   doctorant!: Doctorant;
   steps: string[] =
     [
-      'directer-these',
+      'directeur-these',
       'secretaire-edmi',
       'directeur-laboratoire',
       'responsable-formation-doctorale',
@@ -46,5 +46,6 @@ export class DoctorantComponent implements OnInit {
       return 'red';
     }
   }
+
 
 }

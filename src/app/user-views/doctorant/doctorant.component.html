@@ -3,7 +3,7 @@
   <h2 class="title">Statut du Dossier</h2>
   <div class="card statut">
     <div class="card-body">
-      <h4 *ngIf="doctorant.etape > 0" class="orange">Votre dossier est en cours de traitement...</h4>
+      <h4 *ngIf="doctorant.etape > 0 && doctorant.etape <= 5" class="orange">Votre dossier est en cours de traitement...</h4>
       <h4 *ngIf="doctorant.etape == 0" class="red">Votre Dossier a été rejeté</h4>
       <h4 *ngIf="doctorant.etape > 5" class="green">Votre dossier a été approuvé. Vous etes maintenant, éligible la demande de soutenance</h4>
     </div>
