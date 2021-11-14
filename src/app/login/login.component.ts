@@ -6,11 +6,16 @@ import {DoctorantsService} from "../services/doctorants.service";
 import {Subscription} from "rxjs";
 import {Doctorant} from "../models/doctorant";
 import {SpecialUser} from "../models/Special-user";
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  animations: [
+    fadeInOnEnterAnimation(),
+    fadeOutOnLeaveAnimation()
+  ]
 })
 export class LoginComponent implements OnInit {
 
