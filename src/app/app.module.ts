@@ -19,6 +19,7 @@ import { DoctorantComponent } from './user-views/doctorant/doctorant.component';
 import { SingleDoctorantComponent } from './user-views/single-doctorant/single-doctorant.component';
 import { DirecteurLaboratoireComponent } from './user-views/directeur-laboratoire/directeur-laboratoire.component';
 import {DirecteurEcoleDoctoraleComponent} from "./user-views/directeur-ecole-doctorale/directeur-ecole-doctorale.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
